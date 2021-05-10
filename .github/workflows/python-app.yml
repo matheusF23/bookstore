@@ -20,9 +20,9 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Install requirements
+    - name: Run docker
       run: |
-        pip install -r requirements.txt
+        make run
     - name: Run tests
       run: |
-        python manage.py test
+        make test
